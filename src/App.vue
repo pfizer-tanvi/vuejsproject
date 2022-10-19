@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h1>Leave Management </h1>
+  <div id="nav">
+  
+  <p>
+    <router-link to="/" class="active">Home</router-link> 
+    <router-link :to="{name:'leaverequest'}" class="active">Leave Request</router-link> 
+    <router-link :to="{name:'report'}" class="active">Report</router-link> 
+    <router-link :to="{name:'configuration'}" class="active">Configuration</router-link> 
+    <router-link :to="{name:'userguide'}" class="active">Userguide</router-link> 
+    </p>
+  </div>
+  <router-view/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.active{
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    margin:5px 5px 5px 5px;
+    color :#009879;
 }
+ .exact-active{
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color:#009879;
+  cursor: pointer;
+  margin:5px 5px 5px 5px;
+  color: #ffffff;
+  }
+
 </style>
